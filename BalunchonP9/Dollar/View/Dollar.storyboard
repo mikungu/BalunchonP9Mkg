@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DJx-hK-F8T">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dollar-->
+        <scene sceneID="Iqs-a9-ORL">
+            <objects>
+                <viewController storyboardIdentifier="DollarViewController" id="DJx-hK-F8T" customClass="DollarViewController" customModule="BalunchonP9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Dollar" id="q1G-zQ-rMh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="SiO-5s-ZlX">
+                                <rect key="frame" x="30" y="179" width="333" height="106.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwU-pn-rcd">
+                                        <rect key="frame" x="115.33333333333334" y="0.0" width="102.66666666666666" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q4m-CJ-ol7">
+                                        <rect key="frame" x="30" y="61" width="273" height="45.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="q4m-CJ-ol7" secondAttribute="trailing" constant="30" id="3qQ-lB-UcA"/>
+                                    <constraint firstItem="q4m-CJ-ol7" firstAttribute="leading" secondItem="SiO-5s-ZlX" secondAttribute="leading" constant="30" id="OkO-Vk-sze"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK8-Um-BnH">
+                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5yN-rC-KLj"/>
+                                    <constraint firstAttribute="width" constant="100" id="M5t-O4-rNQ"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="dollarsign.arrow.circlepath" catalog="system"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="dollarTapped:" destination="DJx-hK-F8T" eventType="touchUpInside" id="GdV-gE-k6U"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhL-i7-RYV">
+                                <rect key="frame" x="30" y="576" width="333" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="lON-GF-wel"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Us-0i-QGa"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="7Us-0i-QGa" firstAttribute="trailing" secondItem="NhL-i7-RYV" secondAttribute="trailing" constant="30" id="76j-eG-bli"/>
+                            <constraint firstItem="SiO-5s-ZlX" firstAttribute="centerX" secondItem="q1G-zQ-rMh" secondAttribute="centerX" id="GRO-gR-0AI"/>
+                            <constraint firstItem="SiO-5s-ZlX" firstAttribute="top" secondItem="7Us-0i-QGa" secondAttribute="top" constant="120" id="QXx-8L-TAZ"/>
+                            <constraint firstItem="NhL-i7-RYV" firstAttribute="top" secondItem="hK8-Um-BnH" secondAttribute="bottom" constant="100" id="Yze-wW-fyl"/>
+                            <constraint firstItem="SiO-5s-ZlX" firstAttribute="leading" secondItem="7Us-0i-QGa" secondAttribute="leading" constant="30" id="emf-9B-eea"/>
+                            <constraint firstItem="7Us-0i-QGa" firstAttribute="trailing" secondItem="SiO-5s-ZlX" secondAttribute="trailing" constant="30" id="gvt-5f-fqg"/>
+                            <constraint firstItem="NhL-i7-RYV" firstAttribute="leading" secondItem="7Us-0i-QGa" secondAttribute="leading" constant="30" id="pZa-Qo-PVc"/>
+                            <constraint firstItem="hK8-Um-BnH" firstAttribute="centerX" secondItem="q1G-zQ-rMh" secondAttribute="centerX" id="s3q-CB-EaI"/>
+                            <constraint firstItem="hK8-Um-BnH" firstAttribute="centerY" secondItem="q1G-zQ-rMh" secondAttribute="centerY" id="vWf-ca-9Px"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wGe-cT-6Re" appends="YES" id="Whh-fz-uPX"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dollar" image="dollarsign.arrow.circlepath" catalog="system" id="5Rg-gU-26z"/>
+                    <connections>
+                        <outlet property="dollarArea" destination="NhL-i7-RYV" id="vIH-8c-fxs"/>
+                        <outlet property="dollarButton" destination="hK8-Um-BnH" id="I7E-5O-nM8"/>
+                        <outlet property="euroText" destination="q4m-CJ-ol7" id="uGZ-dy-tiO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z86-X5-vuK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wGe-cT-6Re">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="DJx-hK-F8T" id="rWL-sH-jh3"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="350.38167938931298" y="-422.53521126760563"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dollarsign.arrow.circlepath" catalog="system" width="128" height="112"/>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

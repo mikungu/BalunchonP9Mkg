@@ -7,26 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC3DF8D9298046A5004E6662 /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF8D8298046A5004E6662 /* Dollar.swift */; };
+		DC3DF8DB29816D71004E6662 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF8DA29816D71004E6662 /* Translation.swift */; };
+		DC3DF8DD298183E9004E6662 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF8DC298183E9004E6662 /* APIService.swift */; };
+		DC3DF8F12983D370004E6662 /* DollarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF8F02983D370004E6662 /* DollarViewController.swift */; };
+		DC3DF8F72983F72A004E6662 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF8F62983F72A004E6662 /* TranslationViewController.swift */; };
+		DC62148829903E4700F97489 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62148729903E4700F97489 /* UIViewController.swift */; };
+		DC62149F2994281100F97489 /* RomaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62149E2994281100F97489 /* RomaViewController.swift */; };
+		DC6214A12994282D00F97489 /* NewYorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6214A02994282D00F97489 /* NewYorkViewController.swift */; };
+		DC6214D7299E94BA00F97489 /* DollarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6214D6299E94BA00F97489 /* DollarTest.swift */; };
+		DC6214D9299E950400F97489 /* TranslationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6214D8299E950400F97489 /* TranslationTest.swift */; };
+		DC6214DB299E952F00F97489 /* WeatherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6214DA299E952F00F97489 /* WeatherTest.swift */; };
+		DC6214DD299E95DD00F97489 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6214DC299E95DD00F97489 /* FakeResponseData.swift */; };
+		DC6214DF299E964E00F97489 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6214DE299E964E00F97489 /* URLSessionFake.swift */; };
+		DC6214E1299E96CB00F97489 /* DollarData.json in Resources */ = {isa = PBXBuildFile; fileRef = DC6214E0299E96CB00F97489 /* DollarData.json */; };
+		DC6214E3299E972700F97489 /* TranslationData.json in Resources */ = {isa = PBXBuildFile; fileRef = DC6214E2299E972700F97489 /* TranslationData.json */; };
+		DC6214E5299E978800F97489 /* WeatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = DC6214E4299E978800F97489 /* WeatherData.json */; };
+		DC693BA7298530EA00A556CA /* Translation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC693BA6298530EA00A556CA /* Translation.storyboard */; };
+		DCC40A9629852B59005CE012 /* Dollar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC40A9529852B59005CE012 /* Dollar.storyboard */; };
 		DCE1E366297F0D0E00C41115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1E365297F0D0E00C41115 /* AppDelegate.swift */; };
 		DCE1E368297F0D0E00C41115 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1E367297F0D0E00C41115 /* SceneDelegate.swift */; };
-		DCE1E36A297F0D0E00C41115 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1E369297F0D0E00C41115 /* ViewController.swift */; };
 		DCE1E36D297F0D0E00C41115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE1E36B297F0D0E00C41115 /* Main.storyboard */; };
 		DCE1E36F297F0D1000C41115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCE1E36E297F0D1000C41115 /* Assets.xcassets */; };
 		DCE1E372297F0D1000C41115 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE1E370297F0D1000C41115 /* LaunchScreen.storyboard */; };
+		DCE1E37B297F0D9900C41115 /* Weathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1E37A297F0D9900C41115 /* Weathers.swift */; };
+		DCF43B6029852EF10020D995 /* Weathers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF43B5F29852EF10020D995 /* Weathers.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DC6214D1299E947600F97489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCE1E35A297F0D0E00C41115 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCE1E361297F0D0E00C41115;
+			remoteInfo = BalunchonP9;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		DC3DF8D8298046A5004E6662 /* Dollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dollar.swift; sourceTree = "<group>"; };
+		DC3DF8DA29816D71004E6662 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		DC3DF8DC298183E9004E6662 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DC3DF8F02983D370004E6662 /* DollarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarViewController.swift; sourceTree = "<group>"; };
+		DC3DF8F62983F72A004E6662 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
+		DC62148729903E4700F97489 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		DC62149E2994281100F97489 /* RomaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomaViewController.swift; sourceTree = "<group>"; };
+		DC6214A02994282D00F97489 /* NewYorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkViewController.swift; sourceTree = "<group>"; };
+		DC6214CD299E947600F97489 /* BalunchonP9Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalunchonP9Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6214D6299E94BA00F97489 /* DollarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarTest.swift; sourceTree = "<group>"; };
+		DC6214D8299E950400F97489 /* TranslationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationTest.swift; sourceTree = "<group>"; };
+		DC6214DA299E952F00F97489 /* WeatherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTest.swift; sourceTree = "<group>"; };
+		DC6214DC299E95DD00F97489 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		DC6214DE299E964E00F97489 /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		DC6214E0299E96CB00F97489 /* DollarData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DollarData.json; sourceTree = "<group>"; };
+		DC6214E2299E972700F97489 /* TranslationData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TranslationData.json; sourceTree = "<group>"; };
+		DC6214E4299E978800F97489 /* WeatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherData.json; sourceTree = "<group>"; };
+		DC693BA6298530EA00A556CA /* Translation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Translation.storyboard; path = ../../Translation.storyboard; sourceTree = "<group>"; };
+		DCC40A9529852B59005CE012 /* Dollar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Dollar.storyboard; path = ../../Dollar.storyboard; sourceTree = "<group>"; };
 		DCE1E362297F0D0E00C41115 /* BalunchonP9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalunchonP9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE1E365297F0D0E00C41115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCE1E367297F0D0E00C41115 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DCE1E369297F0D0E00C41115 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DCE1E36C297F0D0E00C41115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCE1E36E297F0D1000C41115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCE1E371297F0D1000C41115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCE1E373297F0D1000C41115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCE1E37A297F0D9900C41115 /* Weathers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weathers.swift; sourceTree = "<group>"; };
+		DCF43B5F29852EF10020D995 /* Weathers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Weathers.storyboard; path = ../../Weathers.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DC6214CA299E947600F97489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DCE1E35F297F0D0E00C41115 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +93,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC3DF8E42983D093004E6662 /* Dollar */ = {
+			isa = PBXGroup;
+			children = (
+				DC3DF8E52983D0C5004E6662 /* Model */,
+				DC3DF8E72983D131004E6662 /* View */,
+				DC3DF8E62983D0F4004E6662 /* Controller */,
+			);
+			path = Dollar;
+			sourceTree = "<group>";
+		};
+		DC3DF8E52983D0C5004E6662 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC3DF8D8298046A5004E6662 /* Dollar.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC3DF8E62983D0F4004E6662 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC3DF8F02983D370004E6662 /* DollarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DC3DF8E72983D131004E6662 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DCC40A9529852B59005CE012 /* Dollar.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC3DF8E82983D163004E6662 /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				DC3DF8E92983D18A004E6662 /* Model */,
+				DC3DF8EB2983D207004E6662 /* View */,
+				DC3DF8EA2983D1F6004E6662 /* Controller */,
+			);
+			path = Translation;
+			sourceTree = "<group>";
+		};
+		DC3DF8E92983D18A004E6662 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC3DF8DA29816D71004E6662 /* Translation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC3DF8EA2983D1F6004E6662 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC3DF8F62983F72A004E6662 /* TranslationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DC3DF8EB2983D207004E6662 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC693BA6298530EA00A556CA /* Translation.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC3DF8EC2983D275004E6662 /* Weathers */ = {
+			isa = PBXGroup;
+			children = (
+				DC3DF8ED2983D294004E6662 /* Model */,
+				DC3DF8EF2983D2C0004E6662 /* View */,
+				DC3DF8EE2983D2A3004E6662 /* Controller */,
+			);
+			path = Weathers;
+			sourceTree = "<group>";
+		};
+		DC3DF8ED2983D294004E6662 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DCE1E37A297F0D9900C41115 /* Weathers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC3DF8EE2983D2A3004E6662 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC62149E2994281100F97489 /* RomaViewController.swift */,
+				DC6214A02994282D00F97489 /* NewYorkViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DC3DF8EF2983D2C0004E6662 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DCF43B5F29852EF10020D995 /* Weathers.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC62148629903DE000F97489 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DC62148729903E4700F97489 /* UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DC6214CE299E947600F97489 /* BalunchonP9Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DC6214D6299E94BA00F97489 /* DollarTest.swift */,
+				DC6214E0299E96CB00F97489 /* DollarData.json */,
+				DC6214D8299E950400F97489 /* TranslationTest.swift */,
+				DC6214E2299E972700F97489 /* TranslationData.json */,
+				DC6214DA299E952F00F97489 /* WeatherTest.swift */,
+				DC6214DC299E95DD00F97489 /* FakeResponseData.swift */,
+				DC6214DE299E964E00F97489 /* URLSessionFake.swift */,
+				DC6214E4299E978800F97489 /* WeatherData.json */,
+			);
+			path = BalunchonP9Tests;
+			sourceTree = "<group>";
+		};
 		DCE1E359297F0D0E00C41115 = {
 			isa = PBXGroup;
 			children = (
 				DCE1E364297F0D0E00C41115 /* BalunchonP9 */,
+				DC6214CE299E947600F97489 /* BalunchonP9Tests */,
 				DCE1E363297F0D0E00C41115 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				DCE1E362297F0D0E00C41115 /* BalunchonP9.app */,
+				DC6214CD299E947600F97489 /* BalunchonP9Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,7 +242,11 @@
 			children = (
 				DCE1E365297F0D0E00C41115 /* AppDelegate.swift */,
 				DCE1E367297F0D0E00C41115 /* SceneDelegate.swift */,
-				DCE1E369297F0D0E00C41115 /* ViewController.swift */,
+				DC62148629903DE000F97489 /* Extension */,
+				DC3DF8E42983D093004E6662 /* Dollar */,
+				DC3DF8E82983D163004E6662 /* Translation */,
+				DC3DF8EC2983D275004E6662 /* Weathers */,
+				DCE1E379297F0D4400C41115 /* APIServices */,
 				DCE1E36B297F0D0E00C41115 /* Main.storyboard */,
 				DCE1E36E297F0D1000C41115 /* Assets.xcassets */,
 				DCE1E370297F0D1000C41115 /* LaunchScreen.storyboard */,
@@ -67,9 +255,35 @@
 			path = BalunchonP9;
 			sourceTree = "<group>";
 		};
+		DCE1E379297F0D4400C41115 /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				DC3DF8DC298183E9004E6662 /* APIService.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DC6214CC299E947600F97489 /* BalunchonP9Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC6214D3299E947600F97489 /* Build configuration list for PBXNativeTarget "BalunchonP9Tests" */;
+			buildPhases = (
+				DC6214C9299E947600F97489 /* Sources */,
+				DC6214CA299E947600F97489 /* Frameworks */,
+				DC6214CB299E947600F97489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC6214D2299E947600F97489 /* PBXTargetDependency */,
+			);
+			name = BalunchonP9Tests;
+			productName = BalunchonP9Tests;
+			productReference = DC6214CD299E947600F97489 /* BalunchonP9Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DCE1E361297F0D0E00C41115 /* BalunchonP9 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCE1E376297F0D1000C41115 /* Build configuration list for PBXNativeTarget "BalunchonP9" */;
@@ -97,6 +311,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					DC6214CC299E947600F97489 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = DCE1E361297F0D0E00C41115;
+					};
 					DCE1E361297F0D0E00C41115 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -116,35 +334,77 @@
 			projectRoot = "";
 			targets = (
 				DCE1E361297F0D0E00C41115 /* BalunchonP9 */,
+				DC6214CC299E947600F97489 /* BalunchonP9Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DC6214CB299E947600F97489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6214E5299E978800F97489 /* WeatherData.json in Resources */,
+				DC6214E1299E96CB00F97489 /* DollarData.json in Resources */,
+				DC6214E3299E972700F97489 /* TranslationData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DCE1E360297F0D0E00C41115 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DCE1E372297F0D1000C41115 /* LaunchScreen.storyboard in Resources */,
 				DCE1E36F297F0D1000C41115 /* Assets.xcassets in Resources */,
+				DC693BA7298530EA00A556CA /* Translation.storyboard in Resources */,
 				DCE1E36D297F0D0E00C41115 /* Main.storyboard in Resources */,
+				DCC40A9629852B59005CE012 /* Dollar.storyboard in Resources */,
+				DCF43B6029852EF10020D995 /* Weathers.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DC6214C9299E947600F97489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6214D7299E94BA00F97489 /* DollarTest.swift in Sources */,
+				DC6214DD299E95DD00F97489 /* FakeResponseData.swift in Sources */,
+				DC6214DB299E952F00F97489 /* WeatherTest.swift in Sources */,
+				DC6214DF299E964E00F97489 /* URLSessionFake.swift in Sources */,
+				DC6214D9299E950400F97489 /* TranslationTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DCE1E35E297F0D0E00C41115 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCE1E36A297F0D0E00C41115 /* ViewController.swift in Sources */,
+				DCE1E37B297F0D9900C41115 /* Weathers.swift in Sources */,
+				DC3DF8DD298183E9004E6662 /* APIService.swift in Sources */,
+				DC6214A12994282D00F97489 /* NewYorkViewController.swift in Sources */,
+				DC3DF8F12983D370004E6662 /* DollarViewController.swift in Sources */,
+				DC3DF8D9298046A5004E6662 /* Dollar.swift in Sources */,
+				DC62148829903E4700F97489 /* UIViewController.swift in Sources */,
 				DCE1E366297F0D0E00C41115 /* AppDelegate.swift in Sources */,
 				DCE1E368297F0D0E00C41115 /* SceneDelegate.swift in Sources */,
+				DC62149F2994281100F97489 /* RomaViewController.swift in Sources */,
+				DC3DF8DB29816D71004E6662 /* Translation.swift in Sources */,
+				DC3DF8F72983F72A004E6662 /* TranslationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC6214D2299E947600F97489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCE1E361297F0D0E00C41115 /* BalunchonP9 */;
+			targetProxy = DC6214D1299E947600F97489 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DCE1E36B297F0D0E00C41115 /* Main.storyboard */ = {
@@ -166,6 +426,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DC6214D4299E947600F97489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OpenClassrooms.BalunchonP9Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BalunchonP9.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BalunchonP9";
+			};
+			name = Debug;
+		};
+		DC6214D5299E947600F97489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OpenClassrooms.BalunchonP9Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BalunchonP9.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BalunchonP9";
+			};
+			name = Release;
+		};
 		DCE1E374297F0D1000C41115 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -337,6 +631,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DC6214D3299E947600F97489 /* Build configuration list for PBXNativeTarget "BalunchonP9Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC6214D4299E947600F97489 /* Debug */,
+				DC6214D5299E947600F97489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DCE1E35D297F0D0E00C41115 /* Build configuration list for PBXProject "BalunchonP9" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

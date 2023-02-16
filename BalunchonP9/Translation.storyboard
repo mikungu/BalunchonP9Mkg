@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EZY-PX-Ud9">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Translation-->
+        <scene sceneID="LoZ-ID-fTn">
+            <objects>
+                <viewController storyboardIdentifier="TranslationViewController" id="EZY-PX-Ud9" customClass="TranslationViewController" customModule="BalunchonP9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zty-xd-gPI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-wv-4Wy">
+                                <rect key="frame" x="16" y="762" width="361" height="40"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lVU-Kc-hjQ"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Translate"/>
+                                <connections>
+                                    <action selector="translateTapped:" destination="EZY-PX-Ud9" eventType="touchUpInside" id="sfm-8E-LsV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9ii-qW-fIO">
+                                <rect key="frame" x="30" y="471" width="333" height="241"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anglais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2R-zQ-44v">
+                                <rect key="frame" x="150.66666666666666" y="411" width="91.666666666666657" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saisissez votre texte !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdA-B6-Aqk">
+                                <rect key="frame" x="30" y="89" width="333" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qol-ZV-QhF">
+                                <rect key="frame" x="30" y="160" width="333" height="212"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dXr-Yf-rNY"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="dXr-Yf-rNY" firstAttribute="trailing" secondItem="Qol-ZV-QhF" secondAttribute="trailing" constant="30" id="6Qd-iE-1z8"/>
+                            <constraint firstItem="dXr-Yf-rNY" firstAttribute="bottom" secondItem="RZ9-wv-4Wy" secondAttribute="bottom" constant="16" id="7vb-aE-uCt"/>
+                            <constraint firstItem="d2R-zQ-44v" firstAttribute="centerY" secondItem="Zty-xd-gPI" secondAttribute="centerY" id="AAN-xI-RfW"/>
+                            <constraint firstItem="dXr-Yf-rNY" firstAttribute="trailing" secondItem="RZ9-wv-4Wy" secondAttribute="trailing" constant="16" id="Ajb-iv-Kdj"/>
+                            <constraint firstItem="Qol-ZV-QhF" firstAttribute="leading" secondItem="dXr-Yf-rNY" secondAttribute="leading" constant="30" id="Dlf-Io-qCc"/>
+                            <constraint firstItem="9ii-qW-fIO" firstAttribute="leading" secondItem="dXr-Yf-rNY" secondAttribute="leading" constant="30" id="MbE-lg-pmj"/>
+                            <constraint firstItem="d2R-zQ-44v" firstAttribute="top" secondItem="Qol-ZV-QhF" secondAttribute="bottom" constant="50" id="N2a-ln-qym"/>
+                            <constraint firstItem="d2R-zQ-44v" firstAttribute="centerX" secondItem="Zty-xd-gPI" secondAttribute="centerX" id="Tgf-Qt-ap3"/>
+                            <constraint firstItem="9ii-qW-fIO" firstAttribute="top" secondItem="d2R-zQ-44v" secondAttribute="bottom" constant="30" id="U4v-F5-iLU"/>
+                            <constraint firstItem="JdA-B6-Aqk" firstAttribute="leading" secondItem="dXr-Yf-rNY" secondAttribute="leading" constant="30" id="ZvZ-vi-YJS"/>
+                            <constraint firstItem="RZ9-wv-4Wy" firstAttribute="top" secondItem="9ii-qW-fIO" secondAttribute="bottom" constant="50" id="amt-CI-PoD"/>
+                            <constraint firstAttribute="trailing" secondItem="JdA-B6-Aqk" secondAttribute="trailing" constant="30" id="eFS-Fg-eRV"/>
+                            <constraint firstItem="RZ9-wv-4Wy" firstAttribute="leading" secondItem="dXr-Yf-rNY" secondAttribute="leading" constant="16" id="ggI-nB-oj5"/>
+                            <constraint firstItem="Qol-ZV-QhF" firstAttribute="top" secondItem="JdA-B6-Aqk" secondAttribute="bottom" constant="30" id="qxC-oY-Ies"/>
+                            <constraint firstItem="dXr-Yf-rNY" firstAttribute="trailing" secondItem="9ii-qW-fIO" secondAttribute="trailing" constant="30" id="r3S-db-j4G"/>
+                            <constraint firstItem="JdA-B6-Aqk" firstAttribute="top" secondItem="dXr-Yf-rNY" secondAttribute="top" constant="30" id="ymk-QN-9pR"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HgC-DQ-H1B" appends="YES" id="dDP-Uo-VYF"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Translation" image="globe.badge.chevron.backward" catalog="system" id="5aV-5O-2Vs"/>
+                    <connections>
+                        <outlet property="textSourceArea" destination="Qol-ZV-QhF" id="bh1-5G-Anw"/>
+                        <outlet property="translateButton" destination="RZ9-wv-4Wy" id="GdU-Js-eXH"/>
+                        <outlet property="transletedArea" destination="9ii-qW-fIO" id="TRK-f1-Y52"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejI-bt-ktg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HgC-DQ-H1B">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="EZY-PX-Ud9" id="fwP-Sf-1LA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="384" y="871"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="globe.badge.chevron.backward" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

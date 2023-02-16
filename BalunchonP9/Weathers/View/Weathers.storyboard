@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mM2-6q-UXp">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather-->
+        <scene sceneID="gOu-9a-X5f">
+            <objects>
+                <viewController storyboardIdentifier="WeathersViewController" id="mM2-6q-UXp" customClass="WeathersViewController" customModule="BalunchonP9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jOo-24-gkc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nTl-AM-ZTH">
+                                <rect key="frame" x="30" y="169" width="333" height="194"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3g-QR-hdd" userLabel="DescrNYLabel">
+                                        <rect key="frame" x="0.0" y="72" width="89" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gQd-ff-MRZ" userLabel="NYImage View">
+                                        <rect key="frame" x="93" y="10.333333333333343" width="240" height="173"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le Temps à New York" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITD-7k-bfl">
+                                <rect key="frame" x="30" y="89" width="333" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7RE-bo-eVu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2X-Ei-MJQ" userLabel="TempNYLabel">
+                                <rect key="frame" x="30" y="134" width="333" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le Temps à Rome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKE-C5-3b8">
+                                <rect key="frame" x="30" y="413" width="333" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0i-40-agm" userLabel="RomeTemperatureLabel">
+                                <rect key="frame" x="30" y="454.33333333333331" width="333" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TyA-Hv-8O1">
+                                <rect key="frame" x="30" y="504.33333333333326" width="333" height="263.66666666666674"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boz-ef-nVt" userLabel="RomaDescription">
+                                        <rect key="frame" x="0.0" y="106.66666666666669" width="93" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODM-aN-umJ">
+                                        <rect key="frame" x="93" y="67.666666666666686" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3AM-wN-N8F"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="3AM-wN-N8F" firstAttribute="trailing" secondItem="D2X-Ei-MJQ" secondAttribute="trailing" constant="30" id="1uo-7E-WSc"/>
+                            <constraint firstItem="D2X-Ei-MJQ" firstAttribute="leading" secondItem="3AM-wN-N8F" secondAttribute="leading" constant="30" id="1zs-by-b3z"/>
+                            <constraint firstItem="3AM-wN-N8F" firstAttribute="trailing" secondItem="ITD-7k-bfl" secondAttribute="trailing" constant="30" id="2Xv-b2-iGn"/>
+                            <constraint firstItem="ITD-7k-bfl" firstAttribute="top" secondItem="3AM-wN-N8F" secondAttribute="top" constant="30" id="3a6-XD-AwH"/>
+                            <constraint firstItem="TyA-Hv-8O1" firstAttribute="leading" secondItem="3AM-wN-N8F" secondAttribute="leading" constant="30" id="8uo-xn-kb3"/>
+                            <constraint firstItem="cKE-C5-3b8" firstAttribute="centerY" secondItem="jOo-24-gkc" secondAttribute="centerY" id="Arj-yO-3Or"/>
+                            <constraint firstItem="TyA-Hv-8O1" firstAttribute="top" secondItem="S0i-40-agm" secondAttribute="bottom" constant="50" id="CcJ-Du-8o2"/>
+                            <constraint firstItem="D2X-Ei-MJQ" firstAttribute="top" secondItem="ITD-7k-bfl" secondAttribute="bottom" constant="15" id="EjS-0I-Gdu"/>
+                            <constraint firstItem="cKE-C5-3b8" firstAttribute="leading" secondItem="3AM-wN-N8F" secondAttribute="leading" constant="30" id="JSg-Ng-gjB"/>
+                            <constraint firstItem="nTl-AM-ZTH" firstAttribute="top" secondItem="ITD-7k-bfl" secondAttribute="bottom" constant="50" id="KRj-UY-Brj"/>
+                            <constraint firstItem="3AM-wN-N8F" firstAttribute="trailing" secondItem="S0i-40-agm" secondAttribute="trailing" constant="30" id="Lyw-Pv-BDn"/>
+                            <constraint firstItem="ITD-7k-bfl" firstAttribute="leading" secondItem="3AM-wN-N8F" secondAttribute="leading" constant="30" id="csm-Qq-6Fi"/>
+                            <constraint firstItem="S0i-40-agm" firstAttribute="leading" secondItem="3AM-wN-N8F" secondAttribute="leading" constant="30" id="h2i-JJ-0P8"/>
+                            <constraint firstItem="cKE-C5-3b8" firstAttribute="centerX" secondItem="jOo-24-gkc" secondAttribute="centerX" id="iBF-Xf-7ZE"/>
+                            <constraint firstItem="S0i-40-agm" firstAttribute="top" secondItem="cKE-C5-3b8" secondAttribute="bottom" constant="15" id="pHA-dO-GPv"/>
+                            <constraint firstItem="3AM-wN-N8F" firstAttribute="trailing" secondItem="nTl-AM-ZTH" secondAttribute="trailing" constant="30" id="s6q-Sv-ZRS"/>
+                            <constraint firstItem="3AM-wN-N8F" firstAttribute="bottom" secondItem="TyA-Hv-8O1" secondAttribute="bottom" constant="50" id="sbj-wE-IaV"/>
+                            <constraint firstItem="3AM-wN-N8F" firstAttribute="trailing" secondItem="TyA-Hv-8O1" secondAttribute="trailing" constant="30" id="uDe-RP-1Xz"/>
+                            <constraint firstItem="3AM-wN-N8F" firstAttribute="trailing" secondItem="cKE-C5-3b8" secondAttribute="trailing" constant="30" id="vKz-ey-LpT"/>
+                            <constraint firstItem="cKE-C5-3b8" firstAttribute="top" secondItem="nTl-AM-ZTH" secondAttribute="bottom" constant="50" id="wqt-yo-fpd"/>
+                            <constraint firstItem="nTl-AM-ZTH" firstAttribute="leading" secondItem="3AM-wN-N8F" secondAttribute="leading" constant="30" id="yM2-SW-Ucl"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Weather" image="cloud.sun.fill" catalog="system" id="QMf-va-7IH"/>
+                    <connections>
+                        <outlet property="descriptionNY" destination="f3g-QR-hdd" id="tVF-Qa-1iy"/>
+                        <outlet property="descriptionRome" destination="boz-ef-nVt" id="2Ha-YY-GrV"/>
+                        <outlet property="imageNY" destination="gQd-ff-MRZ" id="mf9-wV-My0"/>
+                        <outlet property="imageRome" destination="ODM-aN-umJ" id="bpx-Vl-yTB"/>
+                        <outlet property="temperatureNY" destination="D2X-Ei-MJQ" id="Vgl-jY-ha9"/>
+                        <outlet property="temperatureRome" destination="S0i-40-agm" id="2P2-RU-sxP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BYh-c2-yqF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="223"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud.sun.fill" catalog="system" width="128" height="96"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

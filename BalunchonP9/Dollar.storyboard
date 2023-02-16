@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ewe-Do-xC6">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dollar-->
+        <scene sceneID="Q0n-JI-Dc3">
+            <objects>
+                <viewController storyboardIdentifier="DollarViewController" id="ewe-Do-xC6" customClass="DollarViewController" customModule="BalunchonP9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wrI-cO-A0C">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Qnd-i9-YHQ">
+                                <rect key="frame" x="30" y="179" width="333" height="106.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNV-Bw-2pv">
+                                        <rect key="frame" x="115.33333333333334" y="0.0" width="102.66666666666666" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9c-ba-Uez">
+                                        <rect key="frame" x="30" y="61" width="273" height="45.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="M9c-ba-Uez" firstAttribute="leading" secondItem="Qnd-i9-YHQ" secondAttribute="leading" constant="30" id="13W-Fj-R6N"/>
+                                    <constraint firstAttribute="trailing" secondItem="M9c-ba-Uez" secondAttribute="trailing" constant="30" id="JIp-7P-ULo"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPl-ts-1Cx">
+                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="eLJ-g9-Abi"/>
+                                    <constraint firstAttribute="width" constant="100" id="oSx-na-hfr"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="dollarsign.arrow.circlepath" catalog="system"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="dollarTapped:" destination="ewe-Do-xC6" eventType="touchUpInside" id="SCZ-r5-bbj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haw-cr-2Z0">
+                                <rect key="frame" x="30" y="576" width="333" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ToO-vY-db2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P9X-xI-evq"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Qnd-i9-YHQ" firstAttribute="leading" secondItem="P9X-xI-evq" secondAttribute="leading" constant="30" id="2oz-JM-68T"/>
+                            <constraint firstItem="P9X-xI-evq" firstAttribute="trailing" secondItem="Qnd-i9-YHQ" secondAttribute="trailing" constant="30" id="6eN-py-B6V"/>
+                            <constraint firstItem="ZPl-ts-1Cx" firstAttribute="centerX" secondItem="wrI-cO-A0C" secondAttribute="centerX" id="FNw-uH-oSz"/>
+                            <constraint firstItem="haw-cr-2Z0" firstAttribute="leading" secondItem="P9X-xI-evq" secondAttribute="leading" constant="30" id="LCA-kV-MCu"/>
+                            <constraint firstItem="ZPl-ts-1Cx" firstAttribute="centerY" secondItem="wrI-cO-A0C" secondAttribute="centerY" id="NOW-lk-oHM"/>
+                            <constraint firstItem="haw-cr-2Z0" firstAttribute="top" secondItem="ZPl-ts-1Cx" secondAttribute="bottom" constant="100" id="TNK-Nk-YY8"/>
+                            <constraint firstItem="Qnd-i9-YHQ" firstAttribute="top" secondItem="P9X-xI-evq" secondAttribute="top" constant="120" id="bk5-hP-djD"/>
+                            <constraint firstItem="Qnd-i9-YHQ" firstAttribute="centerX" secondItem="wrI-cO-A0C" secondAttribute="centerX" id="nnY-2z-aoE"/>
+                            <constraint firstItem="P9X-xI-evq" firstAttribute="trailing" secondItem="haw-cr-2Z0" secondAttribute="trailing" constant="30" id="q2K-la-A8n"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wOc-HP-rOu" appends="YES" id="bf4-kc-aBN"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dollar" image="dollarsign.arrow.circlepath" catalog="system" id="X2w-4b-DCZ"/>
+                    <connections>
+                        <outlet property="dollarArea" destination="haw-cr-2Z0" id="uNi-aj-Jxx"/>
+                        <outlet property="dollarButton" destination="ZPl-ts-1Cx" id="nDe-VI-B9y"/>
+                        <outlet property="euroText" destination="M9c-ba-Uez" id="ytV-zb-25x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRt-Ed-ZL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wOc-HP-rOu">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="ewe-Do-xC6" id="jiw-D7-k3r"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="350.38167938931298" y="-422.53521126760563"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dollarsign.arrow.circlepath" catalog="system" width="128" height="112"/>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
