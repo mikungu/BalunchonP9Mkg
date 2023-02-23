@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,7 +82,9 @@
                             <outletCollection property="gestureRecognizers" destination="wOc-HP-rOu" appends="YES" id="bf4-kc-aBN"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dollar" image="dollarsign.arrow.circlepath" catalog="system" id="X2w-4b-DCZ"/>
+                    <tabBarItem key="tabBarItem" title="Dollar" id="X2w-4b-DCZ">
+                        <imageReference key="image" image="dollarsign.arrow.circlepath" catalog="system" renderingMode="original"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="dollarArea" destination="haw-cr-2Z0" id="uNi-aj-Jxx"/>
                         <outlet property="dollarButton" destination="ZPl-ts-1Cx" id="nDe-VI-B9y"/>

@@ -30,7 +30,7 @@
         <scene sceneID="f6S-ft-S7d">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="TranslationViewController" storyboardName="Translation" id="X8J-eq-FHp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xP6-HB-8Lc"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="globe.badge.chevron.backward" id="xP6-HB-8Lc"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdD-kv-TQI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,7 +43,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="cloud.sun.fill" catalog="system" id="d61-FE-XII">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="WJL-Wa-yaf" kind="relationship" relationship="viewControllers" id="X2j-W7-Tht"/>
@@ -58,5 +57,6 @@
     </scenes>
     <resources>
         <image name="cloud.sun.fill" catalog="system" width="128" height="96"/>
+        <image name="globe.badge.chevron.backward" width="128" height="128"/>
     </resources>
 </document>

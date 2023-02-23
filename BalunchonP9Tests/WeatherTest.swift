@@ -29,6 +29,7 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
         let temp = 278.03
         let idWeather = 804
         let description = "overcast clouds"
+        print (value)
         XCTAssertTrue(true)
         XCTAssertEqual(humidity, value.main.humidity)
         XCTAssertEqual(temp, value.main.temp)

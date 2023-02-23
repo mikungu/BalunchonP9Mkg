@@ -8,7 +8,7 @@
 import UIKit
 
 class DollarViewController: UIViewController, DollarModelDelegate {
-    
+        
     //MARK: -Outlets
     @IBOutlet weak var euroText: UITextField!
     
@@ -26,6 +26,14 @@ class DollarViewController: UIViewController, DollarModelDelegate {
         super.viewDidLoad()
         
         self.dollarRate.delegate = self
+        
+        dollarArea.textColor = UIColor.black
+        euroText.textColor = UIColor.black
+        
+        if #available(iOS 13.0, *) {
+            //dollarArea.textColor = UIColor.label
+            euroText.textColor = UIColor.label
+        }
     }
     
     // MARK: - DollarModelDelegate
@@ -33,7 +41,19 @@ class DollarViewController: UIViewController, DollarModelDelegate {
     func didReceiveError(_ error: APIError) {
         print("\(error)")
         // Display error here
-        self.displayAlert(title: error, message: "Please enter numbers.", preferredStyle: .alert)
+        switch error {
+        case .url:
+            self.displayAlert(title: "Oups, Error!", message: "The request failed, There is a technical problem with url, Please try later !", preferredStyle: .alert)
+        case .invalidData:
+            self.displayAlert(title: "Oups, Error!", message: "The request failed due to a technical problem, The Data is invalid, Please try later !", preferredStyle: .alert)
+        case .responseCode:
+            self.displayAlert(title: "Oups, Error!", message: "The request failed due to a technical problem with a responseCode, Please try later !", preferredStyle: .alert)
+        case .parsing:
+            self.displayAlert(title: "Oups, Error!", message: "The request failed, There is a technical problem with convertion's data, Please try later !", preferredStyle: .alert)
+        default:
+            break
+        }
+        
     }
     
     func didReceiveDollarValue(_ value: Double) {
@@ -65,7 +85,7 @@ class DollarViewController: UIViewController, DollarModelDelegate {
             return
         }
         guard let baseCurrencyDouble = Double(baseCurrentText) else {
-            self.displayAlert(title: .url, message: "Please enter numbers.", preferredStyle: .alert)
+            self.displayAlert(title: "Oups, Error!", message: "Please enter numbers.", preferredStyle: .alert)
             return
         }
         let result = value * baseCurrencyDouble

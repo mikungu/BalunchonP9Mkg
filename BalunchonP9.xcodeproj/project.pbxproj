@@ -13,7 +13,6 @@
 		DC3DF8F12983D370004E6662 /* DollarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF8F02983D370004E6662 /* DollarViewController.swift */; };
 		DC3DF8F72983F72A004E6662 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF8F62983F72A004E6662 /* TranslationViewController.swift */; };
 		DC62148829903E4700F97489 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62148729903E4700F97489 /* UIViewController.swift */; };
-		DC62149F2994281100F97489 /* RomaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62149E2994281100F97489 /* RomaViewController.swift */; };
 		DC6214A12994282D00F97489 /* NewYorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6214A02994282D00F97489 /* NewYorkViewController.swift */; };
 		DC6214D7299E94BA00F97489 /* DollarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6214D6299E94BA00F97489 /* DollarTest.swift */; };
 		DC6214D9299E950400F97489 /* TranslationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6214D8299E950400F97489 /* TranslationTest.swift */; };
@@ -51,7 +50,6 @@
 		DC3DF8F02983D370004E6662 /* DollarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarViewController.swift; sourceTree = "<group>"; };
 		DC3DF8F62983F72A004E6662 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		DC62148729903E4700F97489 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		DC62149E2994281100F97489 /* RomaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomaViewController.swift; sourceTree = "<group>"; };
 		DC6214A02994282D00F97489 /* NewYorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkViewController.swift; sourceTree = "<group>"; };
 		DC6214CD299E947600F97489 /* BalunchonP9Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalunchonP9Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6214D6299E94BA00F97489 /* DollarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarTest.swift; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 		DC3DF8EE2983D2A3004E6662 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DC62149E2994281100F97489 /* RomaViewController.swift */,
 				DC6214A02994282D00F97489 /* NewYorkViewController.swift */,
 			);
 			path = Controller;
@@ -212,9 +209,9 @@
 				DC6214D8299E950400F97489 /* TranslationTest.swift */,
 				DC6214E2299E972700F97489 /* TranslationData.json */,
 				DC6214DA299E952F00F97489 /* WeatherTest.swift */,
+				DC6214E4299E978800F97489 /* WeatherData.json */,
 				DC6214DC299E95DD00F97489 /* FakeResponseData.swift */,
 				DC6214DE299E964E00F97489 /* URLSessionFake.swift */,
-				DC6214E4299E978800F97489 /* WeatherData.json */,
 			);
 			path = BalunchonP9Tests;
 			sourceTree = "<group>";
@@ -390,7 +387,6 @@
 				DC62148829903E4700F97489 /* UIViewController.swift in Sources */,
 				DCE1E366297F0D0E00C41115 /* AppDelegate.swift in Sources */,
 				DCE1E368297F0D0E00C41115 /* SceneDelegate.swift in Sources */,
-				DC62149F2994281100F97489 /* RomaViewController.swift in Sources */,
 				DC3DF8DB29816D71004E6662 /* Translation.swift in Sources */,
 				DC3DF8F72983F72A004E6662 /* TranslationViewController.swift in Sources */,
 			);

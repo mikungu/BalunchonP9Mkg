@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,7 +30,7 @@
                                     <action selector="translateTapped:" destination="EZY-PX-Ud9" eventType="touchUpInside" id="sfm-8E-LsV"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9ii-qW-fIO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9ii-qW-fIO">
                                 <rect key="frame" x="30" y="471" width="333" height="241"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -81,7 +82,10 @@
                             <outletCollection property="gestureRecognizers" destination="HgC-DQ-H1B" appends="YES" id="dDP-Uo-VYF"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Translation" image="globe.badge.chevron.backward" catalog="system" id="5aV-5O-2Vs"/>
+                    <tabBarItem key="tabBarItem" title="Translation" id="5aV-5O-2Vs">
+                        <imageReference key="image" image="globe.badge.chevron.backward" catalog="system" renderingMode="original"/>
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="textSourceArea" destination="Qol-ZV-QhF" id="bh1-5G-Anw"/>
                         <outlet property="translateButton" destination="RZ9-wv-4Wy" id="GdU-Js-eXH"/>

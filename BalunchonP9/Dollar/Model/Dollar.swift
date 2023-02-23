@@ -26,9 +26,8 @@ protocol DollarModelDelegate: AnyObject {
 
 final class DollarModel {
     //MARK: -Property
-    
     private let apiService : APIService
-    
+    //MARK: -Lifecycle
     init ( apiService : APIService = APIService()) {
         self.apiService = apiService
     }

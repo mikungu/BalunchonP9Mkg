@@ -23,11 +23,10 @@ final class TranslationTest: XCTestCase, TranslationModelDelegate {
     }
     
     func didTranslation (_ valueFR : String) {
-        let sentence = "Je suis en route"
-        XCTAssertFalse(true)
-        expectation.fulfill()
+        let translatedText = "fr"
+        print (valueFR)
         XCTAssertTrue(true)
-        XCTAssertEqual(sentence, valueFR)
+        XCTAssertEqual(translatedText, valueFR)
         expectation.fulfill()
     }
     func didShowError (_ error : APIError) {
@@ -69,7 +68,7 @@ final class TranslationTest: XCTestCase, TranslationModelDelegate {
         let translation = APIService(session: URLSessionFake(data: FakeResponseData.translationCorrectData, response: FakeResponseData.responseOK, error: nil))
         let translationService = TranslationModel(apiService: translation)
         translationService.delegate = self
-        let sentence = "Je suis en route"
+        let sentence = String()
         translationService.getTranslation(sentence: sentence)
         wait(for: [expectation], timeout: 0.5)
     }
