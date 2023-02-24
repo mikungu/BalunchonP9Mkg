@@ -36,7 +36,7 @@ final class TranslationModel {
     //MARK: -Accessible
     
     weak var delegate : TranslationModelDelegate?
-    
+    //function getTranslation where we precise the url, method and callback to launch a call API
     func getTranslation (sentence: String) {
         let url = "https://translation.googleapis.com/language/translate/v2?key=AIzaSyA6eKP0-AlONngf3g_KEul7W7KpnJK2JxM&q=\(sentence)&target=en&format=text"
         

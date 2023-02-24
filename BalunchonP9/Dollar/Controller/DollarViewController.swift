@@ -8,30 +8,27 @@
 import UIKit
 
 class DollarViewController: UIViewController, DollarModelDelegate {
-        
+    
     //MARK: -Outlets
     @IBOutlet weak var euroText: UITextField!
-    
     
     @IBOutlet weak var dollarArea: UILabel!
     
     @IBOutlet weak var dollarButton: UIButton!
     
     //MARK: -Property
-    
+    //an instance of DollarModel
     let dollarRate = DollarModel()
     
     //MARK: -Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.dollarRate.delegate = self
         
+        //white and black mode
         dollarArea.textColor = UIColor.black
         euroText.textColor = UIColor.black
-        
-        if #available(iOS 13.0, *) {
-            //dollarArea.textColor = UIColor.label
+            if #available(iOS 13.0, *) {
             euroText.textColor = UIColor.label
         }
     }
@@ -60,7 +57,6 @@ class DollarViewController: UIViewController, DollarModelDelegate {
         // Display dollar value here
         calculate(value: value)
         print("\(value) ")
-        
     }
     
     //MARK: -Action
@@ -79,7 +75,7 @@ class DollarViewController: UIViewController, DollarModelDelegate {
     }
     
     //MARK: - Privates
-    
+    //function to calculate the amount
     private func calculate (value : Double) {
         guard let baseCurrentText = euroText.text else {
             return

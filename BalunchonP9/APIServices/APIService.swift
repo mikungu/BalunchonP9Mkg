@@ -21,7 +21,7 @@ enum APIError: Error {
 
 class APIService {
     // MARK: - Property
-    
+    //an instance of URLSession
     private let session: URLSession
     private var task : URLSessionDataTask?
     
@@ -32,32 +32,37 @@ class APIService {
     }
     
     //MARK: -Accessible
+    //we create the function that will allow us to make centralized API calls that takes url, method, callback as parameters.
     func makeCall <T: Decodable> (urlString: String, method: HTTPMethod, completion: @escaping (Result<T, Error>)->Void){
         guard let url = URL(string: urlString) else {
             completion(.failure(APIError.url))
             return
         }
-       // var task : URLSessionDataTask?
         task?.cancel()
+        //we create a request
+        //We initialize an instance of URLRequest by passing it our URL as a parameter
         var request = URLRequest(url: url)
+        //I specify the chosen HTTP method with the httpMethod property of URLRequest
         request.httpMethod = method.rawValue
-        
+        //we are going to create a task, and more precisely an instance of URLSessionDataTask
         task = self.session.dataTask(with: request, completionHandler: { data, response, error in
             DispatchQueue.main.async {
+                //we will check that there is no error
                 guard error == nil else {
                     completion(.failure (APIError.anyerror))
                     return
                 }
-                
+                //we will check that the status code of the response is indeed 200
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                     completion(.failure(APIError.responseCode))
                     return
                 }
+                //we will check if we have correct data
                 guard let data = data else {
                     completion(.failure(APIError.invalidData))
                     return
                 }
-                
+                //we will decode data in JSON format to dictionary and others
                 do {
                     let model = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(model))
@@ -69,7 +74,7 @@ class APIService {
                     }
             }
         })
-        
+        //we make the call here
         task?.resume()
     }
     

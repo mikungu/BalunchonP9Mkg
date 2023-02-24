@@ -18,24 +18,26 @@ class TranslationViewController: UIViewController, TranslationModelDelegate {
     @IBOutlet weak var translateButton: UIButton!
     
     //MARK: -Property
+    //an instance of TranslationModel
     let translate = TranslationModel()
-    
+    //MARK: -Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.translate.delegate = self
-        
+        //white and black mode
         textSourceArea.textColor = UIColor.black
         transletedArea.textColor = UIColor.black
         if #available(iOS 13.0, *) {
             textSourceArea.textColor = UIColor.label
             transletedArea.textColor = UIColor.label
         }
+       
     }
     //MARK: - TranslationModelDelagate
     func didTranslation(_ valueFR: String) {
             print (" \(valueFR) ")
         transletedArea.text = valueFR
+       
     }
     
     func didShowError(_ error: APIError) {
@@ -58,7 +60,12 @@ class TranslationViewController: UIViewController, TranslationModelDelegate {
     @IBAction func translateTapped(_ sender: Any) {
         
         let encodedString = textSourceArea.text!.addingPercentEncoding(withAllowedCharacters: CharacterSet(charactersIn: "<>!*();^:@&=+$,|/?%#[]{}~’\" ").inverted)
-        translate.getTranslation(sentence: encodedString!)
+                  
+        if textSourceArea.hasText == false {
+            displayAlert(title: "Oups, Error!", message: "Veuillez saisir du texte!", preferredStyle: .alert)
+        }else {
+            translate.getTranslation(sentence: encodedString!)
+        }
     }
 
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {

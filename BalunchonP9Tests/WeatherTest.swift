@@ -10,8 +10,9 @@ import XCTest
 @testable import BalunchonP9
 
 final class WeatherTest: XCTestCase, WeatherModelDelegate {
-
+    //MARK: -Accessible
     let expectation = XCTestExpectation(description: "Wait for queue change.")
+    //MARK: -Test
     // Test if there is an error
     func testGetWeatherShouldPostFailedCallbackIfError() {
 
@@ -23,7 +24,7 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
        
         wait(for: [expectation], timeout: 0.5)
     }
-    
+    //MARK: -Delegate
     func showWeather (_ value : Weathers) {
         let humidity = 52
         let temp = 278.03
@@ -41,7 +42,7 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
         XCTAssertFalse(false)
         expectation.fulfill()
     }
-    
+    //Test if there is no Data
     func testGetWeatherShouldPostFailedCallbackIfNoData() {
         let weather = APIService(session: URLSessionFake(data: nil, response: nil, error: nil))
         let weatherService = WeatherModel(apiService: weather)
@@ -51,7 +52,7 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
        
         wait(for: [expectation], timeout: 0.5)
     }
-    
+    //Test if there is incorrect Response
     func testGetWeatherShouldPostFailedCallbackIfIncorrectResponse() {
         let weather = APIService(session: URLSessionFake(data: FakeResponseData.weatherCorrectData, response: FakeResponseData.responseKO, error: nil))
         let weatherService = WeatherModel(apiService: weather)
@@ -61,7 +62,7 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
        
         wait(for: [expectation], timeout: 0.5)
     }
-    
+    //Test if there is incorrect Data
     func testGetWeatherShouldPostFailedCallbackIfIncorrectData() {
         let weather = APIService(session: URLSessionFake(data: FakeResponseData.networkIncorrectData, response: FakeResponseData.responseOK, error: nil))
         let weatherService = WeatherModel(apiService: weather)
@@ -71,7 +72,7 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
        
         wait(for: [expectation], timeout: 0.5)
     }
-    
+    //Test if there is no error with correct Data
     func testGetWeatherShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
         let weather = APIService(session: URLSessionFake(data: FakeResponseData.weatherCorrectData, response: FakeResponseData.responseOK, error: nil))
         let weatherService = WeatherModel(apiService: weather)

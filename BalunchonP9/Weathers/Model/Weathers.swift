@@ -45,7 +45,7 @@ final class WeatherModel {
     
     //MARK: -Accessible
     weak var delegate : WeatherModelDelegate?
-    
+    //function getWeather where we precise the url, method and callback to launch a call API
     func getWeather(city: String) {
         
         let url = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=e6fff2754c23ec123583c168c16e8258"

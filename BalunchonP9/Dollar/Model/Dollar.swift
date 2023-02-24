@@ -35,7 +35,7 @@ final class DollarModel {
     //MARK: -Accessible
     
     weak var delegate: DollarModelDelegate?
-    
+    //function getRates where we precise the url, method and callback to launch a call API
     func getRates() {
         let url = "http://data.fixer.io/api/latest?access_key=6828305824724f292feaea538719ac6e&base=EUR&symbols=USD"
         let method: HTTPMethod = .post

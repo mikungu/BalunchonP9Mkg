@@ -22,6 +22,7 @@ class NewYorkViewController: UIViewController, WeatherModelDelegate {
     @IBOutlet weak var newyorkWeatherButton: UIButton!
     
     //MARK: -Property
+    //an instance of WeatherModel
     let weather = WeatherModel()
     //MARK: -Override
     override func viewDidLoad() {
@@ -51,11 +52,9 @@ class NewYorkViewController: UIViewController, WeatherModelDelegate {
         default:
             break
         }
-        
-    
-        
     }
     //MARK: -Private
+    //function to display the icon from the Assets
     private func displayWeatherIcon(weatherData: Weathers) {
         let weatherCode = weatherData.weather[0].id
         
@@ -79,7 +78,7 @@ class NewYorkViewController: UIViewController, WeatherModelDelegate {
         }
     }
     
-    
+    //MARK: -Actions
     @IBAction func showRomaWeather(_ sender: Any) {
         weather.getWeather(city: "Rome")
         welcomeLabel.text = "Benvenuto Roma"
