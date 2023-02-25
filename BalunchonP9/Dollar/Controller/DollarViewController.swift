@@ -28,7 +28,7 @@ class DollarViewController: UIViewController, DollarModelDelegate {
         //white and black mode
         dollarArea.textColor = UIColor.black
         euroText.textColor = UIColor.black
-            if #available(iOS 13.0, *) {
+        if #available(iOS 13.0, *) {
             euroText.textColor = UIColor.label
         }
     }

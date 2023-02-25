@@ -15,13 +15,13 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
     //MARK: -Test
     // Test if there is an error
     func testGetWeatherShouldPostFailedCallbackIfError() {
-
+        
         let weather = APIService(session: URLSessionFake(data: nil, response: nil, error: FakeResponseData.error))
         let weatherService = WeatherModel(apiService: weather)
         weatherService.delegate = self
         
         weatherService.getWeather(city: "Roma")
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //MARK: -Delegate
@@ -49,7 +49,7 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
         weatherService.delegate = self
         
         weatherService.getWeather(city: "Roma")
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //Test if there is incorrect Response
@@ -59,7 +59,7 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
         weatherService.delegate = self
         
         weatherService.getWeather(city: "Roma")
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //Test if there is incorrect Data
@@ -69,7 +69,7 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
         weatherService.delegate = self
         
         weatherService.getWeather(city: "New+York")
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //Test if there is no error with correct Data
@@ -81,5 +81,5 @@ final class WeatherTest: XCTestCase, WeatherModelDelegate {
         weatherService.getWeather(city: city)
         wait(for: [expectation], timeout: 0.5)
     }
-
+    
 }

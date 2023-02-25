@@ -21,8 +21,9 @@ enum APIError: Error {
 
 class APIService {
     // MARK: - Property
-    //an instance of URLSession
+    //an instance of URLSession as dependency injunction
     private let session: URLSession
+    //make the task a property of our APIService class
     private var task : URLSessionDataTask?
     
     // MARK: - Lifecyle
@@ -38,14 +39,16 @@ class APIService {
             completion(.failure(APIError.url))
             return
         }
+        //we will be able to cancel the task if another task is launched
         task?.cancel()
         //we create a request
         //We initialize an instance of URLRequest by passing it our URL as a parameter
         var request = URLRequest(url: url)
-        //I specify the chosen HTTP method with the httpMethod property of URLRequest
+        //We specify the chosen HTTP method with the httpMethod property of URLRequest
         request.httpMethod = method.rawValue
         //we are going to create a task, and more precisely an instance of URLSessionDataTask
         task = self.session.dataTask(with: request, completionHandler: { data, response, error in
+            //return to Main Queue
             DispatchQueue.main.async {
                 //we will check that there is no error
                 guard error == nil else {
@@ -70,8 +73,8 @@ class APIService {
                     completion(.failure(APIError.parsing))
                 }
                 if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                           print(json)
-                    }
+                    print(json)
+                }
             }
         })
         //we make the call here

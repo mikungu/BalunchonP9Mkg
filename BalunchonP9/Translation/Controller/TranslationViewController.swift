@@ -8,7 +8,7 @@
 import UIKit
 
 class TranslationViewController: UIViewController, TranslationModelDelegate {
-
+    
     //MARK: -Outlets
     
     @IBOutlet weak var textSourceArea: UITextView!
@@ -31,13 +31,13 @@ class TranslationViewController: UIViewController, TranslationModelDelegate {
             textSourceArea.textColor = UIColor.label
             transletedArea.textColor = UIColor.label
         }
-       
+        
     }
     //MARK: - TranslationModelDelagate
     func didTranslation(_ valueFR: String) {
-            print (" \(valueFR) ")
+        print (" \(valueFR) ")
         transletedArea.text = valueFR
-       
+        
     }
     
     func didShowError(_ error: APIError) {
@@ -56,18 +56,18 @@ class TranslationViewController: UIViewController, TranslationModelDelegate {
         }
     }
     //MARK: -Actions
-
+    
     @IBAction func translateTapped(_ sender: Any) {
         
         let encodedString = textSourceArea.text!.addingPercentEncoding(withAllowedCharacters: CharacterSet(charactersIn: "<>!*();^:@&=+$,|/?%#[]{}~’\" ").inverted)
-                  
+        
         if textSourceArea.hasText == false {
             displayAlert(title: "Oups, Error!", message: "Veuillez saisir du texte!", preferredStyle: .alert)
         }else {
             translate.getTranslation(sentence: encodedString!)
         }
     }
-
+    
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         textSourceArea.resignFirstResponder()
         transletedArea.resignFirstResponder()

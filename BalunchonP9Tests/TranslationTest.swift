@@ -20,7 +20,7 @@ final class TranslationTest: XCTestCase, TranslationModelDelegate {
         translationService.delegate = self
         
         translationService.getTranslation(sentence: "test1")
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //MARK: -Delegate
@@ -42,7 +42,7 @@ final class TranslationTest: XCTestCase, TranslationModelDelegate {
         translationService.delegate = self
         
         translationService.getTranslation(sentence: "test2")
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //Test if there is incorrect Response
@@ -52,7 +52,7 @@ final class TranslationTest: XCTestCase, TranslationModelDelegate {
         translationService.delegate = self
         
         translationService.getTranslation(sentence: "test3")
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //Test if there is incorrect Data
@@ -62,7 +62,7 @@ final class TranslationTest: XCTestCase, TranslationModelDelegate {
         exchangeRateService.delegate = self
         
         exchangeRateService.getTranslation(sentence: "test4")
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //Test if there is no error with correct Data
@@ -74,5 +74,5 @@ final class TranslationTest: XCTestCase, TranslationModelDelegate {
         translationService.getTranslation(sentence: sentence)
         wait(for: [expectation], timeout: 0.5)
     }
-
+    
 }

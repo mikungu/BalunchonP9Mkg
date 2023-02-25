@@ -19,7 +19,7 @@ final class DollarTest: XCTestCase, DollarModelDelegate {
         dollarService.delegate = self
         
         dollarService.getRates()
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //MARK: -Delegate
@@ -41,7 +41,7 @@ final class DollarTest: XCTestCase, DollarModelDelegate {
         dollarService.delegate = self
         
         dollarService.getRates()
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //Test if there is incorrect response
@@ -51,7 +51,7 @@ final class DollarTest: XCTestCase, DollarModelDelegate {
         dollarService.delegate = self
         
         dollarService.getRates()
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //Test if there is incorrect data
@@ -61,7 +61,7 @@ final class DollarTest: XCTestCase, DollarModelDelegate {
         dollarService.delegate = self
         
         dollarService.getRates()
-       
+        
         wait(for: [expectation], timeout: 0.5)
     }
     //Test if there is no error with a correct data
@@ -74,5 +74,5 @@ final class DollarTest: XCTestCase, DollarModelDelegate {
         
         wait(for: [expectation], timeout: 0.5)
     }
-
+    
 }

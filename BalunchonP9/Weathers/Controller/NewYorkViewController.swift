@@ -8,13 +8,13 @@
 import UIKit
 
 class NewYorkViewController: UIViewController, WeatherModelDelegate {
-   //MARK: -Outlets
+    //MARK: -Outlets
     @IBOutlet weak var welcomeLabel: UILabel!
     
     @IBOutlet weak var mainNY: UILabel!
     
     @IBOutlet weak var descriptionNY: UILabel!
-   
+    
     @IBOutlet weak var iconWeather: UIImageView!
     
     @IBOutlet weak var romeWeatherButton: UIButton!
@@ -37,7 +37,7 @@ class NewYorkViewController: UIViewController, WeatherModelDelegate {
         mainNY.text = " Humidity: \(value.main.humidity) %  Temperature : \(value.main.temp) ° "
         descriptionNY.text = " Description: \(value.weather[0].description) \n Id : \(value.weather[0].id)"
         displayWeatherIcon(weatherData: value)
-                }
+    }
     func showError (_ error: APIError) {
         print ("\(error)")
         switch error {
@@ -86,7 +86,6 @@ class NewYorkViewController: UIViewController, WeatherModelDelegate {
         newyorkWeatherButton.isHidden = false
         view.backgroundColor = .green
     }
-    
     
     @IBAction func showNewYorkWeather(_ sender: Any) {
         weather.getWeather(city: "New+York")
