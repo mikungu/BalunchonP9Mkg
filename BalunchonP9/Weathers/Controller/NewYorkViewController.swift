@@ -7,7 +7,9 @@
 
 import UIKit
 
-class NewYorkViewController: UIViewController, WeatherModelDelegate {
+class NewYorkViewController: UIViewController, WeatherModelDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
     //MARK: -Outlets
     @IBOutlet weak var welcomeLabel: UILabel!
     
@@ -19,7 +21,11 @@ class NewYorkViewController: UIViewController, WeatherModelDelegate {
     
     @IBOutlet weak var romeWeatherButton: UIButton!
     
-    @IBOutlet weak var newyorkWeatherButton: UIButton!
+    @IBOutlet weak var citiesUSPickerView: UIPickerView!
+    
+    @IBOutlet weak var showWeather: UIButton!
+    
+    
     
     //MARK: -Property
     //an instance of WeatherModel
@@ -29,13 +35,14 @@ class NewYorkViewController: UIViewController, WeatherModelDelegate {
         super.viewDidLoad()
         self.weather.delegate = self
         weather.getWeather(city: "New+York")
-        newyorkWeatherButton.isHidden = true
+        citiesUSPickerView.selectRow(34, inComponent: 0, animated: true)
     }
     //MARK: -Delegate
     func showWeather (_ value: Weathers) {
         print ("\(value)")
         mainNY.text = " Humidity: \(value.main.humidity) %  Temperature : \(value.main.temp) ° "
         descriptionNY.text = " Description: \(value.weather[0].description) \n Id : \(value.weather[0].id)"
+        welcomeLabel.text = " Welcome to \(value.name)"
         displayWeatherIcon(weatherData: value)
     }
     func showError (_ error: APIError) {
@@ -82,17 +89,27 @@ class NewYorkViewController: UIViewController, WeatherModelDelegate {
     @IBAction func showRomaWeather(_ sender: Any) {
         weather.getWeather(city: "Rome")
         welcomeLabel.text = "Benvenuto Roma"
-        romeWeatherButton.isHidden = true
-        newyorkWeatherButton.isHidden = false
+        // romeWeatherButton.isHidden = true
         view.backgroundColor = .green
     }
     
-    @IBAction func showNewYorkWeather(_ sender: Any) {
-        weather.getWeather(city: "New+York")
-        welcomeLabel.text = "Welcome to New York"
-        newyorkWeatherButton.isHidden = true
-        romeWeatherButton.isHidden = false
+    @IBAction func tappedShowWeatherUS(_ sender: Any) {
+        let cityIndex = self.citiesUSPickerView.selectedRow(inComponent: 0)
+        let city = citiesUS[cityIndex]
+        weather.getWeather(city: city)
         view.backgroundColor = .red
     }
+    // our pickerView has one column
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    // our pickerView has citiesUS.count elements
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return citiesUS.count
+    }
     
+    // inform the view the current element selected
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return citiesUS[row]
+    }
 }

@@ -10,25 +10,19 @@ struct Weathers : Decodable {
     let weather: [Weather]
     let main : Main
     let dt : Double
-    //let id : Int
-    
-    
+    let name : String
 }
 struct Weather : Decodable {
     let id : Int
     //let main : String
     let description : String
     
-    //let icon : String
-    // var weatherIconUrl : URL {
-    //    let urlString = "http://openweathermap.org/img/wn/\(icon)@2x.png"
-    //   return URL (string: urlString)!
-    // }
 }
 struct Main : Decodable {
     let temp : Double
     let humidity: Int
 }
+
 
 protocol WeatherModelDelegate: AnyObject {
     func showWeather (_ value : Weathers)
@@ -67,3 +61,53 @@ final class WeatherModel {
     }
     
 }
+let citiesUS = [ "Alabama",
+                 "Alaska",
+                 "Arizona",
+                 "Arkansas",
+                 "Californie",
+                 "Caroline+du+Nord",
+                 "Caroline+du+Sud",
+                 "Colorado",
+                 "Connecticut",
+                 "Dakota+du+Nord",
+                 "Dakota+du+Sud",
+                 "Delaware",
+                 "Floride",
+                 "Géorgie",
+                 "Hawaï",
+                 "Idaho",
+                 "Illinois",
+                 "Iowa",
+                 "Indiana",
+                 "Kansas",
+                 "Kentucky",
+                 "Louisiane",
+                 "Maine",
+                 "Maryland",
+                 "Massachusetts",
+                 "Michigan",
+                 "Minnesota",
+                 "Mississippi",
+                 "Missouri",
+                 "Montana",
+                 "Nebraska",
+                 "Nevada",
+                 "New+Hampshire",
+                 "New+Jersey",
+                 "New+York",
+                 //"Nouveau+Mexique",
+                 "Ohio",
+                 "Oklahoma",
+                 "Oregon",
+                 "Pennsylvanie",
+                 "Rhode+Island",
+                 "Tennessee",
+                 "Texas",
+                 "Utah",
+                 "Vermont",
+                 "Virginie",
+                 "Virginie+occidentale",
+                 "Washington",
+                 "Wisconsin"
+]
