@@ -13,7 +13,9 @@ class TranslationViewController: UIViewController, TranslationModelDelegate {
     
     @IBOutlet weak var textSourceArea: UITextView!
     
+   
     @IBOutlet weak var transletedArea: UITextView!
+    
     
     @IBOutlet weak var translateButton: UIButton!
     

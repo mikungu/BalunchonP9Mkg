@@ -12,7 +12,7 @@ class DollarViewController: UIViewController, DollarModelDelegate {
     //MARK: -Outlets
     @IBOutlet weak var euroText: UITextField!
     
-    @IBOutlet weak var dollarArea: UILabel!
+    @IBOutlet weak var dollarArea: UITextField!
     
     @IBOutlet weak var dollarButton: UIButton!
     
@@ -30,6 +30,7 @@ class DollarViewController: UIViewController, DollarModelDelegate {
         euroText.textColor = UIColor.black
         if #available(iOS 13.0, *) {
             euroText.textColor = UIColor.label
+            dollarArea.textColor = UIColor.label
         }
     }
     
